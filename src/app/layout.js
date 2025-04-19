@@ -1,4 +1,5 @@
 // src/app/layout.js
+import Link from "next/link";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -7,9 +8,21 @@ export default function RootLayout({ children }) {
       <body>
         <nav className="p-4 bg-gray-100">
           <ul className="flex space-x-4">
-            <li><a href="/" className="text-blue-500 hover:underline">Home</a></li>
-            <li><a href="/log" className="text-blue-500 hover:underline">Log</a></li>
-            <li><a href="/history" className="text-blue-500 hover:underline">History</a></li>
+            <li>
+              <Link href="/" className="text-blue-500 hover:underline">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/log" className="text-blue-500 hover:underline">
+                Log
+              </Link>
+            </li>
+            <li>
+              <Link href="/history" className="text-blue-500 hover:underline">
+                History
+              </Link>
+            </li>
           </ul>
         </nav>
         {children}
