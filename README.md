@@ -12,7 +12,7 @@ A simple web app to log and track skincare routines.
 3. Run: `npm run dev`
 
 ## Deployment
-Deployed on Vercel: [your-vercel-url]
+Deployed on Vercel: (https://aura-skincare-tracker-o8a1c0pmi-amaya-wickramaarahchis-projects.vercel.app/)
 
 ## Documentation
 - [Wiki](https://github.com/Amaya-Wickramaarachchi/aura-skincare-tracker-app/wiki)
