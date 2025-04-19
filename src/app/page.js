@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 // src/app/page.js
-// Initial customization
 export default function Home() {
   return (
     <div className="p-4">
