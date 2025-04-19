@@ -16,10 +16,27 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
+    "postcss": "^8.4.47",
     "standard-version": "^9.5.0",
-    "tailwindcss": "^4"
-  }
+    "tailwindcss": "^3.4.10"
+  },
+  "description": "A simple web app to log and track skincare routines.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amaya-Wickramaarachchi/aura-skincare-tracker-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amaya-Wickramaarachchi/aura-skincare-tracker-app/issues"
+  },
+  "homepage": "https://github.com/Amaya-Wickramaarachchi/aura-skincare-tracker-app#readme"
 }

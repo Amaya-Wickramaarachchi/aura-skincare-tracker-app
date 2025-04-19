@@ -1,33 +1,46 @@
-// src/app/history/page.js
 "use client";
-import { useState, useEffect } from "react";
 
-export default function History() {
-  const [logs, setLogs] = useState([]);
+  import { useState, useEffect } from "react";
 
-  useEffect(() => {
-    const storedLogs = JSON.parse(localStorage.getItem("skincareLogs") || "[]");
-    setLogs(storedLogs);
-  }, []);
+  export default function HistoryPage() {
+    const [logs, setLogs] = useState([]);
 
-  return (
-    <div className="p-4 max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Skincare History</h1>
-      {logs.length === 0 ? (
-        <p>No logs yet.</p>
-      ) : (
-        <ul className="space-y-4">
-          {logs.map((log, index) => (
-            <li key={index} className="p-4 border rounded">
-              <p><strong>Timestamp:</strong> {new Date(log.timestamp).toLocaleString()}</p>
-              <p><strong>Product:</strong> {log.product}</p>
-              <p><strong>Condition:</strong> {log.condition}</p>
-              <p><strong>Skin Mood:</strong> {log.skinMood}</p>
-              <p><strong>Time of Day:</strong> {log.timeOfDay}</p>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
+    useEffect(() => {
+      const storedLogs = JSON.parse(localStorage.getItem("skincareLogs")) || [];
+      setLogs(storedLogs.filter((log) => log.id && log.product)); // Filter valid logs
+    }, []);
+
+    return (
+      <div className="max-w-4xl mx-auto p-6">
+        <h1 className="text-2xl font-semibold text-skin-plum mb-6 text-center">
+          Skincare History
+        </h1>
+        {logs.length > 0 ? (
+          <table className="w-full bg-skin-cream rounded-lg shadow-md">
+            <thead>
+              <tr className="bg-skin-rose">
+                <th className="p-3 text-skin-plum font-semibold text-left">Product</th>
+                <th className="p-3 text-skin-plum font-semibold text-left">Condition</th>
+                <th className="p-3 text-skin-plum font-semibold text-left">Mood</th>
+                <th className="p-3 text-skin-plum font-semibold text-left">Time</th>
+                <th className="p-3 text-skin-plum font-semibold text-left">Timestamp</th>
+              </tr>
+            </thead>
+            <tbody>
+              {logs.map((log) => (
+                <tr key={log.id} className="border-b border-gray-200">
+                  <td className="p-3 text-skin-plum">{log.product}</td>
+                  <td className="p-3 text-skin-plum">{log.condition}</td>
+                  <td className="p-3 text-skin-plum">{log.skinMood}</td>
+                  <td className="p-3 text-skin-plum">{log.time}</td>
+                  <td className="p-3 text-skin-plum">{log.timestamp}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <p className="text-skin-plum text-center">No logs found.</p>
+        )}
+      </div>
+    );
+  }
