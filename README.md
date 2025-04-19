@@ -15,7 +15,8 @@ A simple web app to log and track skincare routines.
 Deployed on Vercel: [your-vercel-url]
 
 ## Documentation
-See `docs/` for market analysis, architecture, and more.
+- [Wiki](https://github.com/Amaya-Wickramaarachchi/aura-skincare-tracker-app/wiki)
+- See `docs/` for market analysis, architecture, and more.
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
