@@ -1,3 +1,23 @@
+# AURA Skincare Tracker
+A simple web app to log and track skincare routines.
+
+## Features
+- Log skincare products with Product, Condition, Skin Mood, and AM/PM timing.
+- View history of logged routines.
+- Stored in LocalStorage.
+
+## Setup
+1. Clone: `git clone https://github.com/Amaya-Wickramaarachchi/aura-skincare-tracker-app.git`
+2. Install: `npm install`
+3. Run: `npm run dev`
+
+## Deployment
+Deployed on Vercel: [your-vercel-url]
+
+## Documentation
+See `docs/` for market analysis, architecture, and more.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
